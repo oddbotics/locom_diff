@@ -83,8 +83,8 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES oddbot_boot
+  INCLUDE_DIRS include
+  LIBRARIES oddbot_lib
 #  CATKIN_DEPENDS message_generation roscpp std_msgs
 #  DEPENDS system_lib
 )
@@ -101,9 +101,10 @@ include_directories(include
 )
 
 ## Declare a cpp library
-# add_library(oddbot_boot
-#   src/${PROJECT_NAME}/oddbot_boot.cpp
-# )
+ add_library(oddbot_lib
+   src/${PROJECT_NAME}/get_subnet.cpp
+   src/${PROJECT_NAME}/Serial.cpp
+ )
 
 ## Declare a cpp executable
 add_executable(oddbot_locom_test src/oddbot_locom_test.cpp)

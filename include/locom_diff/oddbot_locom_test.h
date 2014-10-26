@@ -11,19 +11,19 @@
 #include "ros/ros.h"
 #include "nav_msgs/Odometry.h"
 #include "geometry_msgs/Twist.h"
+#include "oddbot_lib/Serial.h"
 
 class oddbot_locom_test{
 	public:
 		oddbot_locom_test();
 		void send_od();
-	private:
-		
+	private:		
 		nav_msgs::Odometry od_msg;
 		ros::Publisher od_pub;
 		ros::Subscriber vel_sub;
 		void get_info(const geometry_msgs::Twist::ConstPtr& vel_msg);
 		int subnet;
-		
+		CSerial serial(char *, int);
 };
 
 int main(int argc, char** argv);
