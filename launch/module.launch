@@ -4,5 +4,5 @@
     <node pkg="locom_diff" type="locom_boot_diff" name="$(arg node_name)" output="screen">
     
     </node>
-    <node pkg="locom_diff" type="oddbot_locom_test" name="oddbot_locom_test" output="screen"/>
+    <node pkg="locom_diff" type="oddbot_locom_test" name="oddbot_locom_test_$(arg node_name)" output="screen"/>
 </launch>
