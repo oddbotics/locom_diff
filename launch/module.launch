@@ -1,8 +1,8 @@
 <launch>    
     <arg name="node_name" default="ip" />
     
-    <node pkg="oddbot_boot" type="oddbot_boot_module" name="$(arg node_name)" output="screen">
+    <node pkg="locom_diff" type="locom_boot_diff" name="$(arg node_name)" output="screen">
     
     </node>
-
+    <node pkg="locom_diff" type="oddbot_locom_test" name="oddbot_locom_test" output="screen"/>
 </launch>
