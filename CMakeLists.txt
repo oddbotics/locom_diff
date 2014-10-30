@@ -101,10 +101,10 @@ include_directories(include
 )
 
 ## Declare a cpp library
- add_library(oddbot_lib
-   src/${PROJECT_NAME}/get_subnet.cpp
-   src/${PROJECT_NAME}/Serial.cpp
- )
+# add_library(oddbot_lib
+#   src/${PROJECT_NAME}/get_subnet.cpp
+#   src/${PROJECT_NAME}/Serial.cpp
+# )
 
 ## Declare a cpp executable
 add_executable(oddbot_locom_test src/oddbot_locom_test.cpp)
