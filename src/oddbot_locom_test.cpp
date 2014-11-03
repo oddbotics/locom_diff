@@ -7,7 +7,7 @@ oddbot_locom_test::oddbot_locom_test(){
   od_pub = nodeHandle.advertise<nav_msgs::Odometry>("odom", 1000);
   vel_sub = nodeHandle.subscribe("cmd_vel", 1000, &oddbot_locom_test::get_info, this);
   char s[] = "/dev/ttymcx3";
-  CSerial serial(s, 9600);
+  
 }
 // Callback message
 void oddbot_locom_test::get_info(const geometry_msgs::Twist::ConstPtr& vel_msg){	
