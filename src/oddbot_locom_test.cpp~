@@ -6,13 +6,14 @@ oddbot_locom_test::oddbot_locom_test(){
   ros::NodeHandle nodeHandle;
   od_pub = nodeHandle.advertise<nav_msgs::Odometry>("odom", 1000);
   vel_sub = nodeHandle.subscribe("cmd_vel", 1000, &oddbot_locom_test::get_info, this);
-  //subnet = get_subnet();
+  char s[] = "/dev/ttymcx3";
+  CSerial serial(s, 9600);
 }
 // Callback message
-void oddbot_locom_test::get_info(const geometry_msgs::Twist::ConstPtr& vel_msg){
-	
+void oddbot_locom_test::get_info(const geometry_msgs::Twist::ConstPtr& vel_msg){	
 	ROS_INFO("Getting this forward vel: %f",vel_msg->linear.x);
-  }
+
+}
 
 
 void oddbot_locom_test::send_od(){
