@@ -8,6 +8,18 @@
 #define WHEEL_DIAMETER 100 // 100mm
 #define SERIAL_BUFFER_LEN 32
 
+#define DIST_MODE 0
+#define VEL_MODE 1
+
+
+//CHRIS FIX THIS
+/*const String dist_locomotion_mode = "dist_mode";
+const String vel_locomotion_mode = "vel_mode";
+
+String current_locomotion_mode = vel_locomotion_mode;
+*/
+int current_mode = VEL_MODE;
+
 int PID_output_lower = 0;
 int PID_output_upper = 255;
 

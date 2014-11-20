@@ -8,7 +8,7 @@
 //    delay(10);
 //  }
 //}
-
+/*
 void serialEvent1() {
   if (Serial1.available() > 0) {
     motor_driver_output = Serial1.read();
@@ -21,7 +21,7 @@ void serialEvent1() {
     }
     serial1_buffer[serial1_buffer_position] = motor_driver_output;
   }
-}
+} */
 
 int readSerial1() {
   if (Serial1.available() > 0) {
