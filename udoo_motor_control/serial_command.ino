@@ -1,27 +1,13 @@
 #include "serial_command.h"
 
-void serialEvent() {
-  while (Serial.available() > 0) {
-    input = Serial.parseInt();
-    delay(10);
-//    if (Serial.available()) {
-//      int arg = Serial.parseInt();
-//      Serial.print("Send: ");
-//      Serial.print(input);
-//      Serial.print(" Argument: ");
-//      Serial.println(arg);
-//      sendCommand(input, arg);
-//    } else {
-//      Serial.print("Send: ");
-//      Serial.print(input);
-//      sendCommand(input, 0);
-//    }
-
-
-    PID_target = input;
-    delay(10);
-  }
-}
+//void serialEvent() {
+//  while (Serial.available() > 0) {
+//    input = Serial.parseInt();
+//    delay(10);
+//    PID_target = input;
+//    delay(10);
+//  }
+//}
 
 void serialEvent1() {
   if (Serial1.available() > 0) {

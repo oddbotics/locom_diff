@@ -186,5 +186,5 @@ if(degreesTurn != 0)
   //distReporter.publish(&reported_dist); 
 
   nh.spinOnce();
-  delay(10);
+  delay(20);
 }
