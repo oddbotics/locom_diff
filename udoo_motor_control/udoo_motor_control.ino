@@ -50,7 +50,7 @@ void velocityMessageHandler(const geometry_msgs::Twist& cmd_vel) {
     spd = 128;
     turnAmount = cmd_vel.angular.z;
     timecheck = millis();
-  }
+  }lo
   if (cmd_vel.angular.z == 128 && cmd_vel.linear.x == 128)
   {
     spd = 128;
@@ -61,7 +61,7 @@ void velocityMessageHandler(const geometry_msgs::Twist& cmd_vel) {
 
 }
 
-ros::Subscriber<geometry_msgs::Twist> velocitySubscription("cmd_vel", velocityMessageHandler);
+ros::Subscriber<geometry_msgs::Twist> velocitySubscription("cmd_vel_translated", velocityMessageHandler);
 
 
 
@@ -118,7 +118,6 @@ void setup() {
   turnAmount = 128;
   setSpeedBoth(spd);
   delay(1000);
-
 }
 
 
@@ -126,6 +125,8 @@ void loop() {
   if (current_mode == VEL_MODE)
   {
     setSpeedBoth(spd);
+    
+    
     Turn(turnAmount);
   }
   else if (current_mode == DIST_MODE) {
@@ -169,8 +170,6 @@ void loop() {
     setSpeed1(PID1_output);
     setSpeed1(PID2_output);
     //  setSpeedBoth(sentSpeed);
-
-
 
     // Report the velocity on the ROS publisher
     //reported_velocity.linear.x = getSpeed(1);

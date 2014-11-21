@@ -14,7 +14,8 @@
     
     </node>
     <node pkg="locom_diff" type="oddbot_locom_test" name="oddbot_locom_test" output="screen"/>
-    <node pkg="brain_i3" type="oddbot_brain_translate_cmd" name="oddbot_translate_cmd" output="screen"/>
+    <node pkg="locom_diff" type="oddbot_locom_test" name="oddbot_locom_test" output="screen"/>
+    <node pkg="brain_i3" type="oddbot_brain_translate_cmd" name="oddbot_translate_cmd" output="screen" machine="oddbot" />
     <node pkg="rosserial_python" type="serial_node.py" name="serial" output="screen">
 	<param name="port" type="string" value="/dev/ttymxc3"/>
     </node>
