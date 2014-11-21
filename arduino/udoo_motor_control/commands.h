@@ -41,9 +41,13 @@ http://www.robot-electronics.co.uk/htm/md25ser.htm
 void sendCommand(char command, char commandArgument);
 void setMode(int mode);
 int getSpeed();
-void setSpeedBoth();
+void setSpeedBoth(int spd);
+void setSpeed1(int spd);
+void setSpeed2(int spd);
+void turn(int turnAmount);
 
-int currentMode;
+int convertSpeed(int inspeed);
+
 
 #endif
 
