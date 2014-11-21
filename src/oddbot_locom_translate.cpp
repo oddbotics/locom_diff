@@ -10,9 +10,9 @@ oddbot_locom_translate::oddbot_locom_translate(){
 // Callback message
 void oddbot_locom_translate::get_vel(const geometry_msgs::Twist::ConstPtr& vel_msg){	
 	geometry_msgs::Twist translated_vel;
-	translated_vel.linear.x = 127+(128*vel_msg.linear.x);
-	translated_vel.angular.z = 127+(128*vel_msg.angular.z);
-	vel_pub.publish(translated_vel);
+	translated_vel.linear.x = 127+(128*vel_msg->linear.x);
+	translated_vel.angular.z = 127+(128*vel_msg->angular.z);
+	oddbot_locom_translate::vel_pub.publish(translated_vel);
 }
 
 
@@ -29,7 +29,7 @@ int main(int argc, char** argv){
 
   while (ros::ok())
   {
-    lt.send_od();
+    
     ros::spinOnce();
     loop_rate.sleep();
   }

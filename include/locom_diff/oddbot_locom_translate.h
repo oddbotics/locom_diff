@@ -18,8 +18,8 @@ class oddbot_locom_translate{
 		oddbot_locom_translate();
 		
 	private:		
-		ros::Publisher ve_pub;
-		ros::Subscriber vel_slub;
+		ros::Publisher vel_pub;
+		ros::Subscriber vel_sub;
 		void get_vel(const geometry_msgs::Twist::ConstPtr& vel_msg);
 		
 };
