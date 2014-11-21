@@ -1,5 +1,14 @@
 #include "serial_command.h"
 
+//void serialEvent() {
+//  while (Serial.available() > 0) {
+//    input = Serial.parseInt();
+//    delay(10);
+//    PID_target = input;
+//    delay(10);
+//  }
+//}
+/*
 void serialEvent1() {
   if (Serial1.available() > 0) {
     motor_driver_output = Serial1.read();
@@ -12,7 +21,7 @@ void serialEvent1() {
     }
     serial1_buffer[serial1_buffer_position] = motor_driver_output;
   }
-}
+} */
 
 int readSerial1() {
   if (Serial1.available() > 0) {

@@ -109,6 +109,7 @@ include_directories(include
 ## Declare a cpp executable
 add_executable(oddbot_locom_test src/oddbot_locom_test.cpp)
 add_executable(locom_boot_diff src/locom_boot_diff.cpp)
+add_executable(oddbot_locom_translate src/oddbot_locom_translate.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
@@ -116,6 +117,9 @@ add_executable(locom_boot_diff src/locom_boot_diff.cpp)
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(oddbot_locom_test
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(oddbot_locom_translate
   ${catkin_LIBRARIES}
 )
 target_link_libraries(locom_boot_diff
